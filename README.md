@@ -17,6 +17,7 @@ Model training (and validation on validation data) is performed using `wetland_t
 
 ### Using a pre-trained segmentation model across all of Sweden to perform a full wetland mapping
 _Note: Ensure you have trained a segmentation model (see above) prior to this._
+
 The file `segment_all_of_sweden.py` contains the code needed to evaluate a pre-trained segmentation model at every location of Sweden. This can be very memory-demanding for the computer, so there is an option to run this code in "chunks" that splits Sweden into N subsets, by using the shell script `launch_loop.sh`.
 
 Once you have evaluated the segmentation network in all locations, the results can be merged into a unified "wetland map" spanning all of Sweden, by using the script `merge_tiffs.py`. Finally, if you are interested in exporting the results to GIS, consider the file `write_geotiff.py`.
